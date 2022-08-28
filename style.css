@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(0, 20, 85);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fullview {
+  height: 100vh;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 30% 3.5rem auto;
+  grid-template-areas: 
+    "b b r r"
+    "lock lock lock lock"
+    "legends legends legends legends";
+}
+
+.blueTeam {
+  background-image: linear-gradient(90deg, 
+    rgba(0, 20, 85, .2) 0%,  
+    rgba(59, 105, 255, .4) 15%,
+    rgba(59, 105, 255, .5) 50%, 
+    rgba(59, 105, 255, .4) 85%, 
+    rgba(0, 23, 97, .3) 100%);
+  grid-area: b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.redTeam {
+  background-image: linear-gradient(90deg, 
+    rgba(85, 0, 42, .2) 0%,  
+    rgba(255, 0, 0, .4) 15%, 
+    rgba(255, 0, 0, .5) 50%, 
+    rgba(255, 0, 0, .4) 85%,
+    rgba(0, 20, 85, .2) 100%);
+  grid-area: r;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.locked {
+  background-color: rgb(60, 88, 165);
+  grid-area: lock;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.legendsBox {
+  background-color: rgb(0, 23, 65);
+  grid-area: legends;
+  max-height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+
+
+.players {
+  background-color: rgba(128, 128, 128, 0.150);
+  height: 20vh;
+  width: 12vw;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.blueT {
+  border: solid 5px rgb(0, 0, 56);
+}
+
+.redT {
+  border: solid 5px rgb(48, 0, 0);
+}
+
+.imgcont {
+  object-fit: cover;
+  background-color: transparent;
+  height: 20vh;
+  width: 12vw;
+}
+
+
+/* .ready {
+  background-color: yellow;
+  border-style: solid;
+  border-color: black;
+  border-radius: 25%;
+  height: 45px;
+  width: 200px;
+  margin: 6px;
+} */
+
+.legendList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.legend {
+  background-color: rgba(0, 26, 255, 0.199);
+  width: 20vh;
+  min-width: 10vw;
+  max-width: 15vw;
+  border: solid 5px rgb(122, 128, 218);
+  margin: 10px;
+}
+
+.legend.highlight {
+  border: solid 5px rgb(121, 228, 255);
+}
+
+.banned {
+  filter: saturate(0%);
+}
