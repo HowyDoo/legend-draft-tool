@@ -11,6 +11,11 @@ body {
 }
 
 .fullview {
+  background: 
+      radial-gradient(
+      circle at 75% 10%, rgba(255, 0, 0, 0.35), rgba(225, 0, 0, 0.35), transparent 40%),
+      radial-gradient(
+      circle at top, rgb(20, 45, 135)50%, rgb(0, 0, 0));
   height: 100vh;
   display: grid;
   grid-gap: 3px;
@@ -23,12 +28,6 @@ body {
 }
 
 .blueTeam {
-  background-image: linear-gradient(90deg, 
-    rgba(0, 20, 85, .2) 0%,  
-    rgba(59, 105, 255, .4) 15%,
-    rgba(59, 105, 255, .5) 50%, 
-    rgba(59, 105, 255, .4) 85%, 
-    rgba(0, 23, 97, .3) 100%);
   grid-area: b;
   display: flex;
   flex-wrap: wrap;
@@ -37,12 +36,6 @@ body {
 }
 
 .redTeam {
-  background-image: linear-gradient(90deg, 
-    rgba(85, 0, 42, .2) 0%,  
-    rgba(255, 0, 0, .4) 15%, 
-    rgba(255, 0, 0, .5) 50%, 
-    rgba(255, 0, 0, .4) 85%,
-    rgba(0, 20, 85, .2) 100%);
   grid-area: r;
   display: flex;
   flex-wrap: wrap;
@@ -83,10 +76,12 @@ body {
 }
 
 .blueT {
+  background-color: rgb(20, 40, 120);
   border: solid 5px rgb(0, 0, 56);
 }
 
 .redT {
+  background-color: rgb(100, 30, 30);
   border: solid 5px rgb(48, 0, 0);
 }
 
