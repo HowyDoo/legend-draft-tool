@@ -1,6 +1,9 @@
+const list = document.querySelector('.legendList')
 const legend = document.querySelectorAll('.legend')
 const selections = document.querySelectorAll('.selections')
 document.addEventListener('contextmenu', e => e.preventDefault());
+const info = document.querySelector('.infoBox')
+
 
 const div = document.querySelector('div')
 div.addEventListener('dragstart', (e) => {
@@ -21,7 +24,6 @@ legend.forEach(leg => {
     leg.classList.add('highlight');
 
     Lpick = leg.getAttribute('src');
-
   })
 
   leg.addEventListener('contextmenu', () => {
@@ -42,3 +44,7 @@ selections.forEach(select => {
 
 })
 
+
+info.addEventListener('click', () => {
+  info.classList.toggle('opened')
+})

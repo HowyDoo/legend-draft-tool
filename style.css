@@ -18,9 +18,8 @@ body {
       circle at top, rgb(20, 45, 135)50%, rgb(0, 0, 0));
   height: 100vh;
   display: grid;
-  grid-gap: 3px;
   grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-rows: 30% 3.5rem auto;
+  grid-template-rows: 30vh 3.5rem auto;
   grid-template-areas: 
     "b b r r"
     "lock lock lock lock"
@@ -48,9 +47,8 @@ body {
   background-color: rgb(60, 88, 165);
   grid-area: lock;
   display: flex;
+  position: relative;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -84,6 +82,54 @@ body {
   background-color: rgb(100, 30, 30);
   border: solid 5px rgb(48, 0, 0);
 }
+
+
+.infoBox {
+  position: absolute;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  bottom: 0;
+  background-color: rgba(0, 11, 65, 0.7);
+  height: 3.5rem;
+  width: 3.5rem;
+  border: solid white 1px;
+  border-radius: 20px;
+}
+
+.infoBox:hover {
+  background-color: rgba(40, 112, 112, 0.5);
+}
+
+.iInfo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.4rem;
+  font-size: 2rem;
+  color: rgb(163, 180, 255);
+}
+
+.opened {
+  height: 300px;
+  width: 600px;
+  text-indent: 0;
+  text-align: left;
+  white-space: pre-line;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  padding: 0 30px;
+  transition: height 0.5s;
+}
+
+.opened:hover {
+  background-color: rgba(0, 11, 65, 0.7);
+}
+
+.opened > .iInfo {
+  visibility: hidden;
+}
+
 
 .imgcont {
   object-fit: cover;
